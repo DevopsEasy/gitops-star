@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: staragile-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: staragile
+  template:
+    metadata:
+      labels:
+        run: staragile
+    spec:
+      containers:
+      - name: staragile
+        image: devopseasy/staragile-pipeline:1.0.0-5
+        ports:
+          - containerPort: 8081
+        imagePullPolicy: IfNotPresent
