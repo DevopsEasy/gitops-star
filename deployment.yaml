@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: staragile
-        image: devopseasy/staragile-pipeline:1.0.0-5
+        image: devopseasy/insurance:v1
         ports:
           - containerPort: 8081
         imagePullPolicy: IfNotPresent
