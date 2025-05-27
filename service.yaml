@@ -4,11 +4,11 @@ kind: Service
 metadata:
   name: staragile-service
   labels:
-    app: staragile
+    run: staragile
 spec:
   type: NodePort
   selector:
-    app: staragile
+    run: staragile
   ports:
     - port: 8081
       targetPort: 8081
